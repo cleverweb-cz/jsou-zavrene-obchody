@@ -27,10 +27,10 @@ header, main, footer {
 	}
 }
 header {
-	background: url("line.svg") repeat-x bottom center/1em auto, #f4f4f4;
+	background: url("line.svg") repeat-x bottom center/1rem auto, #f4f4f4;
 }
 footer {
-	background: url("line.svg") repeat-x top center/1em auto, #fff;
+	background: url("line.svg") repeat-x top center/1rem auto, #fff;
 	font-size: 80%;
 }
 main {
