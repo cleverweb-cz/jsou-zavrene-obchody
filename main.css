@@ -6,16 +6,36 @@
 	list-style: none;
 	font-style: normal;
 }
+html {
+	background-color: #f4f4f4;
+}
 body {
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-variation-settings: "wdth" 100;
+	-webkit-text-size-adjust: none
 }
 header, main, footer {
-	margin: 3em auto;
-	max-width: 800px;
-	padding: 0 1em;
+	margin: 0;
+	background-color: #fff;
+	padding: 2rem 1rem;
+
+	& > * {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+}
+header {
+	background: url("line.svg") repeat-x bottom center/1em auto, #f4f4f4;
+}
+footer {
+	background: url("line.svg") repeat-x top center/1em auto, #fff;
+	font-size: 80%;
+}
+main {
+	padding-top: 9rem;
+	padding-bottom: 4rem;
 }
 h1, h2 {
 	margin-bottom: 1em;
@@ -27,26 +47,13 @@ a {
 		color: red;
 	}
 }
-header {
-
-	background: url("line.svg") repeat-x bottom center/1em auto, #f4f4f4;
-	padding: 1em 0 1em 0;
-	max-width: none;
-	margin-top: 0;
-
-	& h1 {
-		max-width: calc(800px + 2rem);
-		margin: 1em auto;
-		padding: 0 1rem;
-	}
-}
 ul.calendar {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
 	gap: .5em;
-	margin: 10em 0 5em 0;
+	margin-bottom: 5rem;
 
-	@media (max-width: 800px) {
+	@media (max-width: 750px) {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
@@ -148,6 +155,7 @@ h1, h2 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: 1em;
 
 	& > *:last-child {
 		font-size: 70%;
@@ -177,11 +185,12 @@ ul.schedule {
 	& li {
 		border-bottom: 1px solid #ddd;
 		padding: .5em 0;
+		display: flex;
+		justify-content: flex-start;
 
 		& em {
-			display: inline-block;
-			min-width: 5em;
 			font-weight: bold;
+			flex: 0 0 5em;
 		}
 	}
 }
